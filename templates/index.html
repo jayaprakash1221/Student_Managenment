@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="text-center">
+
+    <!-- Profile Photo -->
+    <img src="{{ url_for('static', filename='images/profile.png') }}"
+         class="rounded-circle shadow mb-4 profile-img"
+         width="180" height="180"
+         style="object-fit:cover; border:5px solid white;">
+
+    <h5 class="mt-2 fw-bold">Jaya Prakash Naidu</h5>
+    <p class="text-muted">Flask Developer</p>
+
+    <!-- ✅ LIVE STUDENT COUNTER -->
+    <div class="mt-3">
+        <h4 class="fw-bold text-primary">
+            👨‍🎓 Total Students : {{ total_students }}
+        </h4>
+    </div>
+
+    <h1 class="mb-4 mt-3">🎓 Student Management System</h1>
+    <p class="text-muted">Manage students easily and efficiently</p>
+
+    <div class="mt-4">
+        <a href="/add" class="btn btn-primary btn-lg m-2">
+            ➕ Add Student
+        </a>
+
+        <a href="/view" class="btn btn-success btn-lg m-2">
+            📋 View Students
+        </a>
+    </div>
+
+</div>
+
+{% endblock %}
